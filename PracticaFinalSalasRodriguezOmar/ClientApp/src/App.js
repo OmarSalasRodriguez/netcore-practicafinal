@@ -2,6 +2,7 @@ import { Container, Row, Col, Card, CardHeader, CardBody, Button } from "reactst
 import { useEffect, useState } from 'react';
 import PersonaItemTable from "./components/PersonaItemTable";
 import PersonaItemModal from "./components/PersonaItemModal";
+import PersonaCard from "./components/PersonaCard";
 
 const App = () => {
     const [personaItems, setPersonaItems] = useState([]);
@@ -101,15 +102,23 @@ const App = () => {
                                 </div>
                             </div>
                         </CardHeader>
-                        <CardBody>
+                        <CardBody style={{ 'padding': '25px' }}>
 
-                            <PersonaItemTable
+                            <PersonaCard
                                 personaItems={personaItems}
                                 deletePersonaItem={deletePersonaItem}
                                 setEdit={setEdit}
                                 setShowModal={setShowModal}
                                 showModal={showModal}
-                            />
+                            ></PersonaCard>
+
+                            { /* <PersonaItemTable
+                                personaItems={personaItems}
+                                deletePersonaItem={deletePersonaItem}
+                                setEdit={setEdit}
+                                setShowModal={setShowModal}
+                                showModal={showModal}
+                            /> */ }
 
                         </CardBody>
                     </Card>

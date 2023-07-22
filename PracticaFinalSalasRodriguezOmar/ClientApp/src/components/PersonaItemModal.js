@@ -25,7 +25,6 @@ const PersonaModal = ({ showModal, setShowModal, savePersonaItem, edit, setEdit,
         } else {
             setPersonaItem(personaItemModel);
         }
-
     }, [edit]);
 
     const closeModal = () => {
@@ -33,7 +32,7 @@ const PersonaModal = ({ showModal, setShowModal, savePersonaItem, edit, setEdit,
         setEdit(null);
     };
 
-   
+
     return (
         <Modal isOpen={showModal}>
             <ModalHeader>
